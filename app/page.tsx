@@ -1,3 +1,9 @@
+import Header from "@/views/Header";
+
 export default function Home() {
-  return <></>;
+  return (
+    <>
+      <Header />
+    </>
+  );
 }
