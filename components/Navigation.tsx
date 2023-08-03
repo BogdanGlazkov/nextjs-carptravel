@@ -6,7 +6,7 @@ import { INavigate } from "@/types/interfaces";
 export default function Navigation({ onClick }: INavigate) {
   return (
     <nav>
-      <ul className="flex flex-col md:flex-row gap-[48px] md:gap-[24px] lg:gap-[56px] items-center justify-center">
+      <ul className="flex flex-col md:flex-row gap-[48px] md:gap-[24px] lg:gap-[56px] items-center justify-center max-w-[386px] lg:max-w-[514px]">
         {data.map((item) => (
           <li key={item.id}>
             <Link

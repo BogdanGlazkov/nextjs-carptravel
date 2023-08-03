@@ -8,6 +8,7 @@ module.exports = {
   ],
   theme: {
     screens: {
+      xs: { max: "767.99px" },
       sm: "480px",
       md: "768px",
       lg: "1280px",
@@ -15,8 +16,8 @@ module.exports = {
     extend: {
       colors: {
         white: "#FFFFFF",
-        bgMain: "#020F08BF",
-        bgMobile: "#010A05BF",
+        bgMain: "#020F08",
+        bgMobile: "#010A05",
       },
     },
   },

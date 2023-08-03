@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "@/components/Logo";
-import Navigation from "../../components/Navigation";
+import NavBar from "../../components/NavBar";
 
 export default function Header() {
   return (
@@ -8,6 +8,7 @@ export default function Header() {
       <div className="container">
         <div className="flex items-center justify-between">
           <Logo />
+          <NavBar />
         </div>
       </div>
     </header>
