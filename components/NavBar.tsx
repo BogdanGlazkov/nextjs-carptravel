@@ -31,7 +31,7 @@ export default function NavBar() {
             : "xs:static xs:hidden"
         }`}
       >
-        <div className="container relative flex flex-col items-center justify-center xs:w-full xs:h-screen">
+        <div className="relative flex flex-col items-center justify-center xs:w-full xs:h-screen">
           <button
             className="uppercase absolute top-0 right-0 mt-[43px] mr-[20px] md:hidden"
             type="button"

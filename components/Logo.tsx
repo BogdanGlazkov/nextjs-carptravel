@@ -7,14 +7,10 @@ import React from "react";
 
 export default function Logo() {
   return (
-    <Link href="/">
-      <Image
-        className="cursor-pointer"
-        src="/images/logo.svg"
-        alt="Logo"
-        width={61}
-        height={33}
-      />
-    </Link>
+    <div className="w-[61px] h-[33px] cursor-pointer">
+      <Link href="/">
+        <Image src="/images/logo.svg" alt="Logo" width={61} height={33} />
+      </Link>
+    </div>
   );
 }
