@@ -22,13 +22,13 @@ export default function Hero() {
           </p>
         </div>
 
-        <div>
+        <div className="md:w-[230px]">
           <div className="hidden md:flex md:flex-col md:items-end md:mb-[56px] lg:mb-[181px]">
             <p className="text-[67px] lg:text-[98px] font-thin tracking-[8.71px] uppercase">
               <span className="font-medium">7</span>
               Days
             </p>
-            <p className="lg:text-[16px] font-light tracking-[25.9px] lg:tracking-[36.48px] uppercase">
+            <p className="md:text-[14px] lg:text-[16px] font-light tracking-[25px] lg:tracking-[36.48px] uppercase">
               journey
             </p>
           </div>

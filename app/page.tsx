@@ -5,8 +5,10 @@ import About from "@/views/About";
 export default function Home() {
   return (
     <>
-      <Header />
-      <Hero />
+      <div className="top">
+        <Header />
+        <Hero />
+      </div>
       <About />
     </>
   );

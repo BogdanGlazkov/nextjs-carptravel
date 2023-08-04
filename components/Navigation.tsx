@@ -10,7 +10,7 @@ export default function Navigation({ onClick }: INavigate) {
         {data.map((item) => (
           <li key={item.id}>
             <Link
-              className="text-[18px] md:text-[14px] border-b border-b-transparent duration-300 hover:border-b-white focus:border-b-white cursor-pointer"
+              className="text-[18px] md:text-[14px] font-normal tracking-[1.4px] border-b border-b-transparent duration-300 hover:border-b-white focus:border-b-white cursor-pointer"
               to={item.link}
               smooth={true}
               spy={true}
