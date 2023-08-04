@@ -98,6 +98,15 @@ body {
     url("/images/hero-sm.jpg");
 }
 
+#about {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  opacity: 0.75;
+  background-image: linear-gradient(180deg, #001826 0%, rgba(0, 37, 49, 0) 100%),
+    url("/images/about-md.jpg");
+}
+
 @media (min-width: 768px) {
   .top {
     background-image: linear-gradient(
@@ -107,7 +116,17 @@ body {
       ),
       url("/images/hero-md.jpg");
   }
+
+  #about {
+    background-image: linear-gradient(
+        180deg,
+        #001826 0%,
+        rgba(0, 37, 49, 0) 100%
+      ),
+      url("/images/about-md.jpg");
+  }
 }
+
 @media (min-width: 1280px) {
   .top {
     background-image: linear-gradient(
@@ -116,5 +135,14 @@ body {
         rgba(0, 37, 49, 0) 100%
       ),
       url("/images/hero-lg.jpg");
+  }
+
+  #about {
+    background-image: linear-gradient(
+        180deg,
+        #001826 0%,
+        rgba(0, 37, 49, 0) 100%
+      ),
+      url("/images/about-lg.jpg");
   }
 }

@@ -25,7 +25,7 @@ export default function NavBar() {
         Menu
       </button>
       <div
-        className={`xs:absolute xs:z-10 xs:bg-bgMobile xs:backdrop:blur-[25px] ${
+        className={`xs:absolute xs:z-10 xs:bg-bgMobile/75 xs:backdrop-blur-[25px] ${
           mobileMenuOpen
             ? "xs:disable-scroll xs:fixed xs:left-0 xs:top-0 xs:w-screen xs:h-screen"
             : "xs:static xs:hidden"
