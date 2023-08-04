@@ -5,8 +5,8 @@ export default function About() {
     <section className="py-[55px] md:py-[64px] lg:py-[104px]" id="about">
       <div className="container md:relative">
         <div className="md:flex md:justify-between lg:justify-start lg:gap-[24px]">
-          <h2 className="text-[40px] md:text-[67px] lg:text-[98px] font-thin tracking-[-1.6px] md:tracking-[-2.68px] lg:tracking-[-3.92px] uppercase xs:mb-[8px]">
-            WHO <span className="font-medium">WE ARE</span>
+          <h2 className="title xs:mb-[8px]">
+            <span className="font-thin">WHO </span>WE ARE
           </h2>
           <div className="max-w-[180px] md:max-w-[225px] lg:w-[292px] mdOnly:ml-auto">
             <p className="font-extralight leading-[20px] lg:leading-[24px] md:text-[16px] lg:text-[18px] mb-[20px] md:mb-[16px] lg:mb-[24px]">

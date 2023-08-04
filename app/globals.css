@@ -26,6 +26,12 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+@layer components {
+  .title {
+    @apply text-[40px] md:text-[67px] lg:text-[98px] uppercase tracking-[-1.6px] md:tracking-[-2.68px] lg:tracking-[-3.92px];
+  }
+}
+
 .container {
   width: 100%;
   padding: 0 20px;

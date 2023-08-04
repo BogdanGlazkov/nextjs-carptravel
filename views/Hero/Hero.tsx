@@ -14,7 +14,7 @@ export default function Hero() {
         </div>
 
         <div className="w-[280px] md:w-[426px] lg:w-[646px]">
-          <h1 className="text-[40px] md:text-[67px] lg:text-[98px] mb-[24px] md:mb-[68px] lg:mb-[148px] uppercase tracking-[-1.6px] md:tracking-[-2.68px] lg:tracking-[-3.92px]">
+          <h1 className="title mb-[24px] md:mb-[68px] lg:mb-[148px]">
             Uncover <span className="font-thin">Carpathian’s Secrets</span>
           </h1>
           <p className="text-[10px] md:text-[14px] lg:text-[16px] font-extralight leading-[16px] lg:leading-[24px] md:tracking-[1.26px] lg:tracking-[1.44px] max-w-[157px] md:max-w-[265px] lg:max-w-[608px] mb-[24px]">
