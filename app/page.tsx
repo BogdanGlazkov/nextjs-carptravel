@@ -1,6 +1,7 @@
 import Header from "@/views/Header";
 import Hero from "@/views/Hero";
 import About from "@/views/About";
+import Offers from "../views/Offers";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
         <Hero />
       </div>
       <About />
+      <Offers />
     </>
   );
 }
