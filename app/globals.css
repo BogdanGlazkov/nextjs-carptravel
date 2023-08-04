@@ -48,3 +48,43 @@ body {
     padding: 0 104px;
   }
 }
+
+.btn::before,
+.btn::after,
+.btn > span::before,
+.btn > span::after {
+  display: block;
+  content: "";
+  width: 36px;
+  height: 8px;
+  position: absolute;
+}
+
+.btn::before {
+  top: 0;
+  left: 0;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+}
+.btn::after {
+  top: 0;
+  right: 0;
+  border-top: 1px solid white;
+  border-right: 1px solid white;
+}
+.btn > span::before {
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+}
+.btn > span::after {
+  bottom: 0;
+  right: 0;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+}
+
+.btn:hover {
+  border: 1px solid white;
+}
