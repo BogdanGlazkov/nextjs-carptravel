@@ -6,7 +6,7 @@ export default function Slide(slide: ISlideProps) {
   const { bg_image, date, image, subtitle, descr } = slide;
 
   const getPrefix = (src: string) => {
-    if (window.innerWidth < 768) return src;
+    if (typeof window === "undefined" || window.innerWidth < 768) return src;
     return window.innerWidth > 1280
       ? src.replace(".jpg", "-lg.jpg")
       : src.replace(".jpg", "-md.jpg");
