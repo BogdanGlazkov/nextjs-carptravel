@@ -10,7 +10,7 @@
     {
       "id": 1,
       "bg_image": {
-        "src": "/images/offers/sm/bg-offer1.jpg",
+        "src": "/images/offers/bg-offer1.jpg",
         "alt": "ATVs Traveling"
       },
       "date": {
@@ -18,7 +18,7 @@
         "month": "05"
       },
       "image": {
-        "src": "/images/offers/sm/offer1.jpg",
+        "src": "/images/offers/offer1.jpg",
         "alt": "ATVs Traveling"
       },
       "subtitle": "Feel the adrenaline rush",
@@ -27,7 +27,7 @@
     {
       "id": 2,
       "bg_image": {
-        "src": "/images/offers/sm/bg-offer2.jpg",
+        "src": "/images/offers/bg-offer2.jpg",
         "alt": "Rock climbing"
       },
       "date": {
@@ -35,7 +35,7 @@
         "month": "05"
       },
       "image": {
-        "src": "/images/offers/sm/offer2.jpg",
+        "src": "/images/offers/offer2.jpg",
         "alt": "Rock climbing"
       },
       "subtitle": "Destroy your limitations",
@@ -44,7 +44,7 @@
     {
       "id": 3,
       "bg_image": {
-        "src": "/images/offers/sm/bg-offer3.jpg",
+        "src": "/images/offers/bg-offer3.jpg",
         "alt": "Hot air ballooning"
       },
       "date": {
@@ -52,7 +52,7 @@
         "month": "05"
       },
       "image": {
-        "src": "/images/offers/sm/offer3.jpg",
+        "src": "/images/offers/offer3.jpg",
         "alt": "Hot air ballooning"
       },
       "subtitle": "Get Inspired",
@@ -61,28 +61,28 @@
     {
       "id": 4,
       "bg_image": {
-        "src": "/images/offers/sm/bg-offer4.jpg",
+        "src": "/images/offers/bg-offer4.jpg",
         "alt": "Skydiving"
       },
       "date": {
         "day": "04/",
         "month": "05"
       },
-      "image": { "src": "/images/offers/sm/offer4.jpg", "alt": "Skydiving" },
+      "image": { "src": "/images/offers/offer4.jpg", "alt": "Skydiving" },
       "subtitle": "Overcome your fears",
       "descr": "Fly in the sky over the Carpathians! Experienced instructors will help you realize your dream of free flight. Remember the incredible emotions and panoramas from a bird's eye view forever."
     },
     {
       "id": 5,
       "bg_image": {
-        "src": "/images/offers/sm/bg-offer5.jpg",
+        "src": "/images/offers/bg-offer5.jpg",
         "alt": "Rafting"
       },
       "date": {
         "day": "05/",
         "month": "05"
       },
-      "image": { "src": "/images/offers/sm/offer5.jpg", "alt": "Rafting" },
+      "image": { "src": "/images/offers/offer5.jpg", "alt": "Rafting" },
       "subtitle": "Trust the flow",
       "descr": "Join exciting rafting expeditions on the waterways of the Carpathians. Go through challenging waterways and overcome gusty waves, feel the adrenaline, and enjoy the incredible views of the surrounding mountains."
     }

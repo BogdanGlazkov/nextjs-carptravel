@@ -5,11 +5,18 @@ import { ISlideProps } from "../types/interfaces";
 export default function Slide(slide: ISlideProps) {
   const { bg_image, date, image, subtitle, descr } = slide;
 
+  const getPrefix = (src: string) => {
+    if (window.innerWidth < 768) return src;
+    return window.innerWidth > 1280
+      ? src.replace(".jpg", "-lg.jpg")
+      : src.replace(".jpg", "-md.jpg");
+  };
+
   return (
     <div className="relative keen-slider__slide py-[54px] md:py-[64px] lg:py-[104px]">
       <Image
         className="absolute top-0 left-0 bottom-0 right-0 -z-10 object-cover object-center"
-        src={bg_image.src}
+        src={getPrefix(bg_image.src)}
         alt={bg_image.alt}
         fill
         quality={100}
@@ -29,7 +36,7 @@ export default function Slide(slide: ISlideProps) {
         <div className="w-full flex flex-col md:flex-row justify-between md:gap-[20px] lg:gap-[332px]">
           <Image
             className="w-full h-auto md:w-[463px] md:h-[370px] lg:w-[608px] lg:h-[434px] mb-[12px] md:mb-0 object-cover object-center"
-            src={image.src}
+            src={getPrefix(image.src)}
             alt={image.alt}
             width={0}
             height={0}
