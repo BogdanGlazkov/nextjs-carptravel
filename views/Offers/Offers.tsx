@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from "react";
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
@@ -30,6 +31,24 @@ export default function Offers() {
           </li>
         ))}
       </ul>
+
+      {loaded && instanseRef.current ? (
+        <div className="absolute top-[calc(50%+85px)] left-[7%] md:top-[180px] md:left-[calc(50%+130px)] lg:top-[244px] lg:left-[calc(50%+50px)] flex flex-col items-start gap-[16px] lg:gap-[24px] max-w-[211px] lg:max-w-[455px]">
+          {data.buttons.map((button, idx) => (
+            <button
+              className={`${
+                currentSlide === idx
+                  ? "text-white font-medium dotted flex items-center gap-[8px]"
+                  : " text-white/50"
+              } uppercase text-left text-[20px] md:text-[22px] lg:text-[28px] leading-[0.8] font-extralight cursor-pointer`}
+              key={idx}
+              onClick={() => instanseRef.current?.moveToIdx(idx)}
+            >
+              {button}
+            </button>
+          ))}
+        </div>
+      ) : null}
     </section>
   );
 }
