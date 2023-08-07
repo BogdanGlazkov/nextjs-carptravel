@@ -7,7 +7,7 @@ export default function Hero() {
       className="pt-[105px] pb-[56px] md:pt-[122px] md:pb-[64px] lg:pt-[130px] lg:pb-[104px]"
       id="hero"
     >
-      <div className="container md:flex md:gap-[48px] lg:gap-[281px]">
+      <div className="container md:flex md:gap-[48px] lg:gap-[285px]">
         <div className="md:hidden flex flex-col items-end mb-[24px]">
           <p className="text-[37px] font-thin uppercase tracking-[1.66px] leading-none">
             <span className="font-medium">7</span>
@@ -27,7 +27,7 @@ export default function Hero() {
           </p>
         </div>
 
-        <div className="md:w-[230px]">
+        <div className="md:w-[230px] lg:w-[294px]">
           <div className="hidden md:flex md:flex-col md:items-end md:mb-[56px] lg:mb-[181px]">
             <p className="text-[67px] lg:text-[98px] font-thin tracking-[8.71px] uppercase leading-none">
               <span className="font-medium">7</span>
@@ -37,7 +37,7 @@ export default function Hero() {
               journey
             </p>
           </div>
-          <p className="font-extralight md:text-[16px] lg:text-[18px] leading-[20px] lg:leading-[24px] mb-[24px] md:mb-[28px]">
+          <p className="font-extralight text-justify md:text-[16px] lg:text-[18px] leading-[20px] lg:leading-[24px] mb-[24px] md:mb-[28px]">
             We offer you unforgettable trips to the most beautiful parts of the
             Carpathians. Enjoy stunning views, exciting expeditions, and the
             best service!
