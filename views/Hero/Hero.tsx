@@ -9,11 +9,13 @@ export default function Hero() {
     >
       <div className="container md:flex md:gap-[48px] lg:gap-[281px]">
         <div className="md:hidden flex flex-col items-end mb-[24px]">
-          <p className="text-[37px] font-thin uppercase">
+          <p className="text-[37px] font-thin uppercase tracking-[1.66px] leading-none">
             <span className="font-medium">7</span>
             Days
           </p>
-          <p className="text-[12px] font-light uppercase">journey</p>
+          <p className="text-[12px] font-light uppercase tracking-[9.48px] leading-none">
+            journey
+          </p>
         </div>
 
         <div className="w-[280px] md:w-[426px] lg:w-[646px]">
@@ -27,11 +29,11 @@ export default function Hero() {
 
         <div className="md:w-[230px]">
           <div className="hidden md:flex md:flex-col md:items-end md:mb-[56px] lg:mb-[181px]">
-            <p className="text-[67px] lg:text-[98px] font-thin tracking-[8.71px] uppercase">
+            <p className="text-[67px] lg:text-[98px] font-thin tracking-[8.71px] uppercase leading-none">
               <span className="font-medium">7</span>
               Days
             </p>
-            <p className="md:text-[14px] lg:text-[16px] font-light tracking-[25px] lg:tracking-[36.48px] uppercase">
+            <p className="md:text-[14px] lg:text-[16px] font-light tracking-[25px] lg:tracking-[36.48px] uppercase leading-none">
               journey
             </p>
           </div>

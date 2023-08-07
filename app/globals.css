@@ -89,18 +89,15 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
-  opacity: 0.75;
-  background-image: linear-gradient(180deg, #001826 0%, rgba(0, 37, 49, 0) 100%),
-    url("/images/hero-sm.jpg");
+  background-image: url("/images/hero.jpg");
 }
 
 #about {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top center;
-  opacity: 0.75;
-  background-image: linear-gradient(180deg, #001826 0%, rgba(0, 37, 49, 0) 100%),
-    url("/images/about-md.jpg");
+  background-position-y: top;
+  background-position-x: 20%;
+  background-image: url("/images/about.jpg");
 }
 
 .dotted::before {
@@ -112,45 +109,7 @@ body {
   background-color: #fff;
 }
 
-@media (min-width: 768px) {
-  .top {
-    background-image: linear-gradient(
-        180deg,
-        #001826 0%,
-        rgba(0, 37, 49, 0) 100%
-      ),
-      url("/images/hero-md.jpg");
-  }
-
-  #about {
-    background-image: linear-gradient(
-        180deg,
-        #001826 0%,
-        rgba(0, 37, 49, 0) 100%
-      ),
-      url("/images/about-md.jpg");
-  }
-}
-
 @media (min-width: 1280px) {
-  .top {
-    background-image: linear-gradient(
-        180deg,
-        #001826 0%,
-        rgba(0, 37, 49, 0) 100%
-      ),
-      url("/images/hero-lg.jpg");
-  }
-
-  #about {
-    background-image: linear-gradient(
-        180deg,
-        #001826 0%,
-        rgba(0, 37, 49, 0) 100%
-      ),
-      url("/images/about-lg.jpg");
-  }
-
   .dotted::before {
     width: 8px;
     height: 8px;
