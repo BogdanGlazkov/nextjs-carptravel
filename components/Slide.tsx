@@ -35,11 +35,11 @@ export default function Slide(slide: ISlideProps) {
             height={0}
             sizes="100vw"
           />
-          <div className="w-full flex flex-col gap-[224px] md:gap-[34px] lg:justify-between mdOnly:mt-[197px]">
-            <p className="text-[12px] text-end md:text-start font-extralight tracking-[2.4px]">
+          <div className="w-full flex flex-col gap-[224px] md:gap-[34px] lg:gap-0 mdOnly:mt-[197px]">
+            <p className="text-[12px] md:text-start font-extralight tracking-[2.4px] lg:hidden">
               {subtitle}
             </p>
-            <p className="flex-grow text-[14px] md:text-[13px] lg:text-[18px] font-extralight leading-[20px] lg:leading-[24px] lg:max-w-[293px] md:text-justify">
+            <p className="flex-grow lg:flex-grow-0 text-[14px] md:text-[13px] lg:text-[18px] font-extralight leading-[20px] lg:leading-[24px] lg:max-w-[293px] md:text-justify lg:mt-auto">
               {descr}
             </p>
           </div>
