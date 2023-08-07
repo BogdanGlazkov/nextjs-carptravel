@@ -3,7 +3,10 @@ import Button from "@/components/Button";
 
 export default function Hero() {
   return (
-    <section className="hero md:py-[64px] lg:pt-[48px] lg:pb-[80px]">
+    <section
+      className="pt-[105px] pb-[56px] md:pt-[122px] md:pb-[64px] lg:pt-[130px] lg:pb-[104px]"
+      id="hero"
+    >
       <div className="container md:flex md:gap-[48px] lg:gap-[281px]">
         <div className="md:hidden flex flex-col items-end mb-[24px]">
           <p className="text-[37px] font-thin uppercase">
