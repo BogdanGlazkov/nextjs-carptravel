@@ -33,7 +33,7 @@ export default function Offers() {
       </ul>
 
       {loaded && instanseRef.current ? (
-        <div className="absolute top-[calc(50%+85px)] left-[7%] md:top-[180px] md:left-[calc(50%+130px)] lg:top-[244px] lg:left-[calc(50%+85px)] flex flex-col items-start gap-[16px] lg:gap-[24px] max-w-[211px] lg:max-w-[455px]">
+        <div className="absolute top-[calc(50%+85px)] left-[7%] md:top-[180px] md:left-[calc(50%+130px)] lg:top-[244px] lg:left-[calc(50%+85px)] flex flex-col items-start gap-[16px] lg:gap-[24px] max-w-[211px] lg:max-w-[455px] z-10">
           {data.buttons.map((button, idx) => (
             <button
               className={`${

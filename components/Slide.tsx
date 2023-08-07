@@ -5,18 +5,27 @@ import { ISlideProps } from "../types/interfaces";
 export default function Slide(slide: ISlideProps) {
   const { bg_image, date, image, subtitle, descr } = slide;
 
-  const getPrefix = (src: string) => {
-    if (typeof window === "undefined" || window.innerWidth < 768) return src;
-    return window.innerWidth > 1280
-      ? src.replace(".jpg", "-lg.jpg")
-      : src.replace(".jpg", "-md.jpg");
-  };
-
   return (
     <div className="relative keen-slider__slide py-[54px] md:py-[64px] lg:py-[104px]">
       <Image
-        className="absolute top-0 left-0 bottom-0 right-0 -z-10 object-cover object-center"
-        src={getPrefix(bg_image.src)}
+        className="absolute md:hidden top-0 left-0 bottom-0 right-0 -z-10 object-cover object-center"
+        src={bg_image.src}
+        alt={bg_image.alt}
+        fill
+        quality={100}
+        sizes="100vw"
+      />
+      <Image
+        className="absolute hidden mdOnly:block top-0 left-0 bottom-0 right-0 -z-10 object-cover object-center"
+        src={bg_image.src.replace(".jpg", "-md.jpg")}
+        alt={bg_image.alt}
+        fill
+        quality={100}
+        sizes="100vw"
+      />
+      <Image
+        className="absolute hidden lg:block top-0 left-0 bottom-0 right-0 -z-10 object-cover object-center"
+        src={bg_image.src.replace(".jpg", "-lg.jpg")}
         alt={bg_image.alt}
         fill
         quality={100}
@@ -35,8 +44,24 @@ export default function Slide(slide: ISlideProps) {
 
         <div className="w-full flex flex-col md:flex-row justify-between md:gap-[20px] lg:gap-[332px]">
           <Image
-            className="w-full h-auto md:w-[463px] md:h-[370px] lg:w-[608px] lg:h-[434px] mb-[12px] md:mb-0 object-cover object-center"
-            src={getPrefix(image.src)}
+            className="w-full md:hidden mb-[12px] object-cover object-center"
+            src={image.src}
+            alt={image.alt}
+            width={0}
+            height={0}
+            sizes="100vw"
+          />
+          <Image
+            className="hidden mdOnly:block w-[463px] h-[370px] object-cover object-center"
+            src={image.src.replace(".jpg", "-md.jpg")}
+            alt={image.alt}
+            width={0}
+            height={0}
+            sizes="100vw"
+          />
+          <Image
+            className="hidden lg:block w-[608px] h-[434px] object-cover object-center"
+            src={image.src.replace(".jpg", "-lg.jpg")}
             alt={image.alt}
             width={0}
             height={0}
