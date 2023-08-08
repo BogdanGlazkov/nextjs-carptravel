@@ -17,5 +17,6 @@
     "email": "Invalid email",
     "phone": "Incorrect phone"
   },
-  "confirm": "I confirm my consent to the processing of personal data."
+  "confirm": "I confirm my consent to the processing of personal data.",
+  "send": "Send"
 }

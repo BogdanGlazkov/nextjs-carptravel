@@ -6,7 +6,7 @@ export default function About() {
     <section className="py-[55px] md:py-[64px] lg:py-[104px]" id="about">
       <div className="container md:relative">
         <div className="md:flex md:justify-between lg:justify-start lg:gap-[30px]">
-          <h2 className="title xs:mb-[20px] leading-none">
+          <h2 className="title xs:mb-[20px]">
             <span className="font-thin">{data.title.who}</span>
             {data.title.weAre}
           </h2>

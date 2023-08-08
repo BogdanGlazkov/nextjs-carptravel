@@ -100,6 +100,13 @@ body {
   background-image: url("/images/about.jpg");
 }
 
+#career {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-image: url("/images/career.jpg");
+}
+
 .dotted::before {
   content: "";
   display: block;
