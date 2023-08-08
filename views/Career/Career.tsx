@@ -18,7 +18,7 @@ export default function Career() {
 
         <div className="md:flex md:gap-[20px]">
           <div className="mb-[56px] md:w-[221px] lg:w-[625px]">
-            <h3 className="text-[30px] lg:text-[36px] font-extralight uppercase mb-[36px] md:mb-[56px] lg:mb-[45px] ml-[100px] md:ml-0 mdOnly::text-right lg:ml-[147px]">
+            <h3 className="text-[30px] lg:text-[36px] font-extralight uppercase mb-[36px] md:mb-[56px] lg:mb-[45px] ml-[100px] md:ml-0 mdOnly:text-right lg:ml-[147px]">
               {data.title.span3}
             </h3>
             <ul className="text-right mr-[99px] md:mr-0">
@@ -38,7 +38,7 @@ export default function Career() {
             </ul>
           </div>
 
-          <div className="md:pt-[100px]">
+          <div className="md:pt-[100px] lg:pt-[8px]">
             <div className="text-[14px] md:text-[13px] lg:text-[18px] leading-[20px] lg:leading-[24px] font-extralight ml-[101px] md:ml-0 mb-[24px] md:w-[221px] lg:w-[234px]">
               <p>{data.descr.bottom1}</p>
               <p>{data.descr.bottom2}</p>

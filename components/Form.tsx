@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import useFormPersist from "react-hook-form-persist";
 import toast, { Toaster } from "react-hot-toast";
@@ -9,6 +9,7 @@ import data from "@/data/form.json";
 import InputError from "./InputError";
 
 export default function Form({ extended }: { extended: boolean }) {
+  const [checked, setChecked] = useState(false);
   const isBrowser = typeof window !== "undefined";
   const SESSION_KEY = "form";
 
@@ -36,11 +37,19 @@ export default function Form({ extended }: { extended: boolean }) {
   return (
     <>
       <form
-        className="flex flex-col gap-[24px] md:gap-[20px] lg:gap-[42px] mdOnly:flex-row w-full lg:max-w-[608px] leading-[24px]"
+        className={`${
+          extended ? "lg:flex-row lg:gap-[24px]" : "lg:flex-col lg:gap-[42px]"
+        } flex flex-col gap-[24px] md:gap-[20px] mdOnly:flex-row w-full lg:max-w-[608px] leading-[24px]`}
         onSubmit={handleSubmit(onSubmit)}
       >
-        <div className="flex flex-col lg:flex-row gap-[25px] md:gap-[28px] lg:gap-[20px] w-full mdOnly:w-[221px]">
-          <label className="block w-full min-h-[80px] text-[12px] font-extralight tracking-[2.4px]">
+        <div
+          className={`${
+            extended
+              ? "lg:flex-col md:gap-[16px] lg:gap-[26px] lg:w-[290px]"
+              : "flex-row md:gap-[28px] lg:gap-[20px] lg:w-full"
+          } flex flex-col gap-[25px] w-full mdOnly:w-[221px]`}
+        >
+          <label className="block w-full text-[12px] font-extralight tracking-[2.4px]">
             {data.fields.name}
             <input
               className="input"
@@ -64,7 +73,7 @@ export default function Form({ extended }: { extended: boolean }) {
             ) : null}
           </label>
 
-          <label className="block w-full min-h-[80px] text-[12px] font-extralight tracking-[2.4px]">
+          <label className="block w-full text-[12px] font-extralight tracking-[2.4px]">
             {data.fields.email}
             <input
               className="input"
@@ -85,7 +94,7 @@ export default function Form({ extended }: { extended: boolean }) {
 
           {extended ? (
             <>
-              <label className="block w-full min-h-[80px] text-[12px] font-extralight tracking-[2.4px]">
+              <label className="block w-full text-[12px] font-extralight tracking-[2.4px]">
                 {data.fields.position}
                 <input
                   className="input"
@@ -105,7 +114,7 @@ export default function Form({ extended }: { extended: boolean }) {
                 ) : null}
               </label>
 
-              <label className="block w-full min-h-[80px] text-[12px] font-extralight tracking-[2.4px]">
+              <label className="block w-full text-[12px] font-extralight tracking-[2.4px]">
                 {data.fields.phone}
                 <input
                   className="input"
@@ -131,7 +140,9 @@ export default function Form({ extended }: { extended: boolean }) {
           <label className="block w-full text-[12px] leading-loose font-extralight tracking-[2.4px] mb-[16px] lg:mb-[24px]">
             {data.fields.message}
             <textarea
-              className="input h-[193px] md:h-[221px] lg:h-[174px]"
+              className={`${
+                extended ? "lg:h-[268px]" : "lg:h-[174px]"
+              } input h-[193px] md:h-[221px]`}
               maxLength={200}
               cols={20}
               rows={8}
@@ -152,10 +163,34 @@ export default function Form({ extended }: { extended: boolean }) {
             ) : null}
           </label>
 
-          <div className="flex justify-end">
+          <div className="relative md:flex md:justify-between">
+            {extended ? (
+              <label className="md:absolute md:top-0 md:-left-[242px] lg:-left-[314px] flex items-start gap-[8px] text-[12px] font-extralight leading-[22px] mb-[16px] lg:mb-[24px]">
+                <div className="flex items-center justify-center w-[22px] h-[22px] lg:w-[24px] lg:h-[24px] border border-white">
+                  <div
+                    className={`${
+                      checked ? "bg-white" : "bg-white/10"
+                    } w-[14px] h-[14px] lg:w-[16px] lg:h-[16px]`}
+                  >
+                    <input
+                      className="hidden"
+                      type="checkbox"
+                      onClick={() => setChecked(!checked)}
+                    />
+                  </div>
+                </div>
+                <span className="inline-block md:w-[192px] lg:w-[258px]">
+                  {data.confirm}
+                </span>
+              </label>
+            ) : null}
+
             <button
-              className="text-[30px] lg:text-[32px] font-medium uppercase duration-300 hover:opacity-50 focus:opacity-50"
+              className={`${
+                checked ? "cursor-pointer" : "pointer-events-none"
+              } block ml-auto text-[30px] lg:text-[32px] font-medium uppercase duration-300 hover:opacity-50 focus:opacity-50`}
               type="submit"
+              disabled={!checked}
             >
               {data.send}
             </button>
