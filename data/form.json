@@ -15,7 +15,9 @@
   "errors": {
     "name": "Incorrect name",
     "email": "Invalid email",
-    "phone": "Incorrect phone"
+    "phone": "Incorrect phone",
+    "notEmpty": "This field can't be empty",
+    "notValid": "Invalid field"
   },
   "confirm": "I confirm my consent to the processing of personal data.",
   "send": "Send"

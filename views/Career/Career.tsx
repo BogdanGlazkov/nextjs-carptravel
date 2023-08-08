@@ -1,6 +1,6 @@
 import React from "react";
 import data from "@/data/career.json";
-import formData from "@/data/form.json";
+import Form from "@/components/Form";
 
 export default function Career() {
   return (
@@ -44,7 +44,7 @@ export default function Career() {
               <p>{data.descr.bottom2}</p>
             </div>
 
-            <form>Form</form>
+            <Form />
           </div>
         </div>
       </div>

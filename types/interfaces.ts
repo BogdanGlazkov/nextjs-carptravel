@@ -19,3 +19,11 @@ export interface IImage {
   src: string;
   alt: string;
 }
+
+export interface IFormData {
+  fullName: string;
+  email: string;
+  position?: string;
+  phone?: number;
+  message: string;
+}

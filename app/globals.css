@@ -24,6 +24,12 @@ body {
   .title {
     @apply text-[40px] md:text-[67px] lg:text-[98px] uppercase tracking-[-1.6px] md:tracking-[-2.68px] lg:tracking-[-3.92px] leading-[56px] md:leading-tight;
   }
+  .input {
+    @apply block w-full h-[24px] lg:h-[28px] py-[4px] pl-[8px] text-[13px] lg:text-[20px] bg-white/5 duration-300 hover:bg-white/10 focus:bg-white/10 placeholder:opacity-20;
+  }
+  .inputWarn {
+    @apply block text-[12px] text-red-500 text-end tracking-[2.4px];
+  }
 }
 
 .container {
