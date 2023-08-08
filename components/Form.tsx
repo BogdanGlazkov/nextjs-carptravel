@@ -6,8 +6,9 @@ import useFormPersist from "react-hook-form-persist";
 import toast, { Toaster } from "react-hot-toast";
 import { IFormData } from "@/types/interfaces";
 import data from "@/data/form.json";
+import InputError from "./InputError";
 
-export default function Form() {
+export default function Form({ extended }: { extended: boolean }) {
   const isBrowser = typeof window !== "undefined";
   const SESSION_KEY = "form";
 
@@ -47,6 +48,10 @@ export default function Form() {
               placeholder={data.placeholders.name}
               {...register("fullName", {
                 required: data.errors.notEmpty,
+                pattern: {
+                  value: /^[a-zA-Z0-9_ ]+$/,
+                  message: data.errors.name,
+                },
                 minLength: { value: 2, message: "2 characters minimum" },
                 maxLength: {
                   value: 50,
@@ -54,9 +59,9 @@ export default function Form() {
                 },
               })}
             />
-            <span className="inputWarn">
-              {errors["fullName"] ? errors["fullName"]?.message : null}
-            </span>
+            {errors["fullName"] ? (
+              <InputError text={errors["fullName"]?.message} />
+            ) : null}
           </label>
 
           <label className="block w-full min-h-[80px] text-[12px] font-extralight tracking-[2.4px]">
@@ -69,14 +74,57 @@ export default function Form() {
                 required: data.errors.notEmpty,
                 pattern: {
                   value: /^\S+@\S+\.\S+$/,
-                  message: data.errors.notValid,
+                  message: data.errors.email,
                 },
               })}
             />
-            <span className="inputWarn">
-              {errors["email"] ? errors["email"]?.message : null}
-            </span>
+            {errors["email"] ? (
+              <InputError text={errors["email"]?.message} />
+            ) : null}
           </label>
+
+          {extended ? (
+            <>
+              <label className="block w-full min-h-[80px] text-[12px] font-extralight tracking-[2.4px]">
+                {data.fields.position}
+                <input
+                  className="input"
+                  type="text"
+                  placeholder={data.placeholders.position}
+                  {...register("position", {
+                    required: data.errors.notEmpty,
+                    minLength: { value: 2, message: "2 characters minimum" },
+                    maxLength: {
+                      value: 50,
+                      message: "Too long (max 50 characters)",
+                    },
+                  })}
+                />
+                {errors["position"] ? (
+                  <InputError text={errors["position"]?.message} />
+                ) : null}
+              </label>
+
+              <label className="block w-full min-h-[80px] text-[12px] font-extralight tracking-[2.4px]">
+                {data.fields.phone}
+                <input
+                  className="input"
+                  type="tel"
+                  placeholder={data.placeholders.phone}
+                  {...register("phone", {
+                    required: data.errors.notEmpty,
+                    pattern: {
+                      value: /^[0-9]+$/,
+                      message: data.errors.phone,
+                    },
+                  })}
+                />
+                {errors["phone"] ? (
+                  <InputError text={errors["phone"]?.message} />
+                ) : null}
+              </label>
+            </>
+          ) : null}
         </div>
 
         <div>
@@ -99,9 +147,9 @@ export default function Form() {
                 },
               })}
             />
-            <span className="inputWarn">
-              {errors["message"] ? errors["message"]?.message : null}
-            </span>
+            {errors["message"] ? (
+              <InputError text={errors["message"]?.message} />
+            ) : null}
           </label>
 
           <div className="flex justify-end">

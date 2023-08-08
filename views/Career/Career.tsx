@@ -44,7 +44,7 @@ export default function Career() {
               <p>{data.descr.bottom2}</p>
             </div>
 
-            <Form />
+            <Form extended={true} />
           </div>
         </div>
       </div>
