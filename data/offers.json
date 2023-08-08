@@ -6,6 +6,10 @@
     "Skydiving",
     "Rafting"
   ],
+  "title": {
+    "span1": "WE ",
+    "span2": "OFFER"
+  },
   "slides": [
     {
       "id": 1,

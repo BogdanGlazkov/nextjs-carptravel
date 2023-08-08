@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { ISlideProps } from "../types/interfaces";
+import data from "@/data/offers.json";
 
 export default function Slide(slide: ISlideProps) {
   const { bg_image, date, image, subtitle, descr } = slide;
@@ -18,7 +19,8 @@ export default function Slide(slide: ISlideProps) {
       <div className="container">
         <div className="mb:[14px] md:mb[40px] lg:mb[20px] md:flex md:gap-[170px] lg:gap-[162px] md:items-center">
           <h2 className="title xs:mb-[24px]">
-            <span className="font-thin">WE </span>OFFER
+            <span className="font-thin">{data.title.span1}</span>
+            {data.title.span2}
           </h2>
           <p className="text-[43px] md:text-[67px] lg:text-[98px] font-thin text-end">
             {date.day}

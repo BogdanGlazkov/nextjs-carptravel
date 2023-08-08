@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Navigation from "./Navigation";
+import data from "@/data/buttons.json";
 
 export default function NavBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -22,7 +23,7 @@ export default function NavBar() {
         type="button"
         onClick={toggleMobileMenu}
       >
-        Menu
+        {data.menu}
       </button>
       <div
         className={`xs:absolute xs:z-20 xs:bg-bgMobile/75 xs:backdrop-blur-[25px] ${
@@ -37,7 +38,7 @@ export default function NavBar() {
             type="button"
             onClick={closeMobileMenu}
           >
-            Close
+            {data.close}
           </button>
           <Navigation onClick={closeMobileMenu} />
         </div>
