@@ -113,6 +113,13 @@ body {
   background-image: url("/images/career.jpg");
 }
 
+#contacts {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-image: url("/images/contacts.jpg");
+}
+
 .dotted::before {
   content: "";
   display: block;

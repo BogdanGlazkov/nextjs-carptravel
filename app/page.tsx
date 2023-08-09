@@ -3,6 +3,7 @@ import Hero from "@/views/Hero";
 import About from "@/views/About";
 import Offers from "../views/Offers";
 import Career from "../views/Career";
+import Contacts from "../views/Contacts";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <Offers />
         <Career />
       </main>
+      <Contacts />
     </>
   );
 }

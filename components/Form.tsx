@@ -46,7 +46,7 @@ export default function Form({ extended }: { extended: boolean }) {
           className={`${
             extended
               ? "lg:flex-col md:gap-[16px] lg:gap-[26px] lg:w-[290px]"
-              : "flex-row md:gap-[28px] lg:gap-[20px] lg:w-full"
+              : "lg:flex-row md:gap-[28px] lg:gap-[20px] lg:w-full"
           } flex flex-col gap-[25px] w-full mdOnly:w-[221px]`}
         >
           <label className="block w-full text-[12px] font-extralight tracking-[2.4px]">
@@ -141,7 +141,9 @@ export default function Form({ extended }: { extended: boolean }) {
             {data.fields.message}
             <textarea
               className={`${
-                extended ? "lg:h-[268px]" : "lg:h-[174px]"
+                extended
+                  ? "md:w-[221px] lg:w-[268px] lg:h-[268px]"
+                  : "md:w-[463px] lg:w-[607px] lg:h-[174px]"
               } input h-[193px] md:h-[221px]`}
               maxLength={200}
               cols={20}
