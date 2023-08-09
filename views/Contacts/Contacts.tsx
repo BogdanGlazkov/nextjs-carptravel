@@ -1,10 +1,9 @@
-import React from "react";
-import Form from "../../components/Form";
 import data from "@/data/contacts.json";
+import Form from "../../components/Form";
 
 export default function Contacts() {
   return (
-    <footer className="py-[40px] md:py-[80px] lg:py-[100px]" id="contacts">
+    <section className="py-[40px] md:py-[80px] lg:py-[100px]" id="contacts">
       <div className="container">
         <h2 className="title mb-[49px] lg:mb-[86px]">
           <span className="font-thin">{data.title.span1}</span>
@@ -72,6 +71,6 @@ export default function Contacts() {
           <Form extended={false} />
         </div>
       </div>
-    </footer>
+    </section>
   );
 }

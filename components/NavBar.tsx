@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Navigation from "./Navigation";
+
 import data from "@/data/buttons.json";
+import Navigation from "./Navigation";
 
 export default function NavBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

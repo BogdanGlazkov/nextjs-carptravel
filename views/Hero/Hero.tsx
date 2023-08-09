@@ -1,4 +1,3 @@
-import React from "react";
 import Button from "@/components/Button";
 import data from "@/data/hero.json";
 import btnData from "@/data/buttons.json";

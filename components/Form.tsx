@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import useFormPersist from "react-hook-form-persist";
 import toast, { Toaster } from "react-hot-toast";
+
 import { IFormData } from "@/types/interfaces";
 import data from "@/data/form.json";
 import InputError from "./InputError";
@@ -31,7 +32,7 @@ export default function Form({ extended }: { extended: boolean }) {
   useFormPersist(SESSION_KEY, {
     watch,
     setValue,
-    storage: isBrowser ? sessionStorage : undefined,
+    storage: isBrowser ? localStorage : undefined,
   });
 
   return (
@@ -49,7 +50,7 @@ export default function Form({ extended }: { extended: boolean }) {
               : "lg:flex-row md:gap-[28px] lg:gap-[20px] lg:w-full"
           } flex flex-col gap-[25px] w-full mdOnly:w-[221px]`}
         >
-          <label className="block w-full text-[12px] font-extralight tracking-[2.4px]">
+          <label className="relative block w-full text-[12px] font-extralight tracking-[2.4px]">
             {data.fields.name}
             <input
               className="input"
@@ -73,7 +74,7 @@ export default function Form({ extended }: { extended: boolean }) {
             ) : null}
           </label>
 
-          <label className="block w-full text-[12px] font-extralight tracking-[2.4px]">
+          <label className="relative block w-full text-[12px] font-extralight tracking-[2.4px]">
             {data.fields.email}
             <input
               className="input"
@@ -94,7 +95,7 @@ export default function Form({ extended }: { extended: boolean }) {
 
           {extended ? (
             <>
-              <label className="block w-full text-[12px] font-extralight tracking-[2.4px]">
+              <label className="relative block w-full text-[12px] font-extralight tracking-[2.4px]">
                 {data.fields.position}
                 <input
                   className="input"
@@ -114,7 +115,7 @@ export default function Form({ extended }: { extended: boolean }) {
                 ) : null}
               </label>
 
-              <label className="block w-full text-[12px] font-extralight tracking-[2.4px]">
+              <label className="relative block w-full text-[12px] font-extralight tracking-[2.4px]">
                 {data.fields.phone}
                 <input
                   className="input"
@@ -137,14 +138,14 @@ export default function Form({ extended }: { extended: boolean }) {
         </div>
 
         <div>
-          <label className="block w-full text-[12px] leading-loose font-extralight tracking-[2.4px] mb-[16px] lg:mb-[24px]">
+          <label className="relative block w-full text-[12px] leading-loose font-extralight tracking-[2.4px] mb-[16px] lg:mb-[24px]">
             {data.fields.message}
             <textarea
               className={`${
                 extended
                   ? "md:w-[221px] lg:w-[268px] lg:h-[268px]"
                   : "md:w-[463px] lg:w-[607px] lg:h-[174px]"
-              } input h-[193px] md:h-[221px]`}
+              } input h-[193px] md:h-[221px] resize-none`}
               maxLength={200}
               cols={20}
               rows={8}
@@ -167,7 +168,7 @@ export default function Form({ extended }: { extended: boolean }) {
 
           <div className="relative md:flex md:justify-between">
             {extended ? (
-              <label className="md:absolute md:top-0 md:-left-[242px] lg:-left-[314px] flex items-start gap-[8px] text-[12px] font-extralight leading-[22px] mb-[16px] lg:mb-[24px]">
+              <label className="relative md:absolute md:top-0 md:-left-[242px] lg:-left-[314px] flex items-start gap-[8px] text-[12px] font-extralight leading-[22px] mb-[16px] lg:mb-[24px] cursor-pointer">
                 <div className="flex items-center justify-center w-[22px] h-[22px] lg:w-[24px] lg:h-[24px] border border-white">
                   <div
                     className={`${
@@ -188,11 +189,8 @@ export default function Form({ extended }: { extended: boolean }) {
             ) : null}
 
             <button
-              className={`${
-                checked ? "cursor-pointer" : "pointer-events-none"
-              } block ml-auto text-[30px] lg:text-[32px] font-medium uppercase duration-300 hover:opacity-50 focus:opacity-50`}
+              className="block ml-auto text-[30px] lg:text-[32px] font-medium leading-normal uppercase duration-300 hover:opacity-50 focus:opacity-50 cursor-pointer"
               type="submit"
-              disabled={!checked}
             >
               {data.send}
             </button>

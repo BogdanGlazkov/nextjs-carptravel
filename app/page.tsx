@@ -14,8 +14,8 @@ export default function Home() {
         <About />
         <Offers />
         <Career />
+        <Contacts />
       </main>
-      <Contacts />
     </>
   );
 }

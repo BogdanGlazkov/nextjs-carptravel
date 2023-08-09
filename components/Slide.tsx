@@ -1,6 +1,6 @@
-import React from "react";
 import Image from "next/image";
-import { ISlideProps } from "../types/interfaces";
+
+import { ISlideProps } from "@/types/interfaces";
 import data from "@/data/offers.json";
 
 export default function Slide(slide: ISlideProps) {

@@ -1,7 +1,7 @@
-import React from "react";
 import { Link } from "react-scroll";
-import data from "@/data/navigation.json";
+
 import { INavigate } from "@/types/interfaces";
+import data from "@/data/navigation.json";
 
 export default function Navigation({ onClick }: INavigate) {
   return (

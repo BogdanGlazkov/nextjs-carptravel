@@ -1,4 +1,3 @@
-import React from "react";
 import data from "@/data/career.json";
 import Form from "@/components/Form";
 

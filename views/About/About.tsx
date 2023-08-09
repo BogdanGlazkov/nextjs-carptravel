@@ -1,4 +1,3 @@
-import React from "react";
 import data from "@/data/about.json";
 
 export default function About() {
