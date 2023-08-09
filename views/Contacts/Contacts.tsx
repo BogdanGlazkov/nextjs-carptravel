@@ -18,7 +18,7 @@ export default function Contacts() {
                   {data.phone.numbers.map((number, idx) => (
                     <li key={idx}>
                       <a
-                        className="duration-300 hover:opacity-50 focus:opacity-50"
+                        className="duration-300 hover:border-b focus:border-b"
                         href={number.url}
                       >
                         {number.name}
@@ -33,7 +33,7 @@ export default function Contacts() {
 
               <div className="flex justify-end items-center gap-[20px] text-[14px] font-normal md:text-[16px] lg:text-[18px]">
                 <a
-                  className="duration-300 hover:opacity-50 focus:opacity-50"
+                  className="duration-300 hover:border-b focus:border-b"
                   href={`mailto:${data.email.email}`}
                 >
                   <p>{data.email.email}</p>
@@ -52,7 +52,7 @@ export default function Contacts() {
                     key={idx}
                   >
                     <a
-                      className="duration-300 hover:opacity-50 focus:opacity-50"
+                      className="duration-300 hover:border-b focus:border-b"
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
