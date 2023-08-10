@@ -7,7 +7,7 @@ export default function Slide(slide: ISlideProps) {
   const { bg_image, date, image, subtitle, descr } = slide;
 
   return (
-    <div className="relative keen-slider__slide py-[54px] md:py-[64px] lg:py-[104px]">
+    <div className="relative py-[54px] md:py-[64px] lg:py-[104px]">
       <Image
         className="absolute top-0 left-0 bottom-0 right-0 -z-10 object-cover object-center"
         src={bg_image.src}

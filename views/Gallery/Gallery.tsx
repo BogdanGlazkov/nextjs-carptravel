@@ -11,7 +11,7 @@ export default function Gallery() {
   const [loaded, setLoaded] = useState(false);
 
   const [sliderRef, instanceRef] = useKeenSlider<HTMLUListElement>({
-    slides: { origin: "center", perView: 3, spacing: 24 },
+    slides: { origin: "center", perView: 2, spacing: 24 },
     loop: true,
     created() {
       setLoaded(true);
@@ -19,6 +19,7 @@ export default function Gallery() {
     breakpoints: {
       "(max-width: 767.8px)": {
         vertical: true,
+        slides: { origin: "center", perView: 3, spacing: 24 },
       },
     },
   });
@@ -35,7 +36,7 @@ export default function Gallery() {
         </h2>
         <ul className="gallery_slider keen-slider" ref={sliderRef}>
           {data.images.map((image, idx) => (
-            <li className="keen-slider__slide shadow-gallery" key={idx}>
+            <li className="keen-slider__slide" key={idx}>
               <Image
                 className="w-full h-auto"
                 src={image.src}
