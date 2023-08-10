@@ -8,7 +8,7 @@ export default function Slide(slide: ISlideProps) {
 
   return (
     <div
-      className="relative py-[54px] md:py-[64px] lg:py-[104px]"
+      className="relative h-full py-[54px] md:py-[64px] lg:py-[104px]"
       key={Date.now()}
     >
       <Image

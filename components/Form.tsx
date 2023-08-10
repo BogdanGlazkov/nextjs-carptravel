@@ -117,12 +117,18 @@ export default function Form({ extended }: { extended: boolean }) {
 
               <label className="relative block w-full text-[12px] font-extralight tracking-[2.4px]">
                 {data.fields.phone}
+                <span className="absolute left-[8px] bottom-0">
+                  {data.placeholders.phoneCode}
+                </span>
                 <input
-                  className="input"
+                  className="input pl-[50px]"
                   type="tel"
                   placeholder={data.placeholders.phone}
                   {...register("phone", {
                     required: data.errors.notEmpty,
+                    minLength: { value: 10, message: data.errors.phone },
+                    maxLength: { value: 10, message: data.errors.phone },
+
                     pattern: {
                       value: /^[0-9]+$/,
                       message: data.errors.phone,
