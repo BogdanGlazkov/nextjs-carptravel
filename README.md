@@ -1,5 +1,4 @@
 <h1>CarpTravel</h1>
-<hr />
 <p>This web-site offers you unforgettable trips to the most beautiful parts of the Carpathians. Enjoy stunning views, exciting expeditions, and the best service!</p>
 <hr />
 <h2>Technologies Used</h2>
@@ -27,7 +26,7 @@
 <li>Start the project:
 <code>npm run dev</code>
 </li>
-<li>use the project on http://localhost:3000</li>
+<li>Use the project on http://localhost:3000</li>
 </ol>
 <hr />
 <h2>Usage</h2>
