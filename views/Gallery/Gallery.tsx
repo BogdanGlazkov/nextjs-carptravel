@@ -26,7 +26,7 @@ export default function Gallery() {
 
   return (
     <section
-      className="relative py-[56px] md:py-[64px] lg:py-[80px]"
+      className="relative min-h-screen py-[56px] md:py-[64px] lg:py-[80px]"
       id="gallery"
     >
       <div className="container">
@@ -34,7 +34,7 @@ export default function Gallery() {
           <span className="font-thin">{data.title.span1}</span>
           {data.title.span2}
         </h2>
-        <ul className="gallery_slider keen-slider" ref={sliderRef}>
+        <ul className="gallery_slider keen-slider h-full" ref={sliderRef}>
           {data.images.map((image, idx) => (
             <li className="keen-slider__slide" key={idx}>
               <Image
