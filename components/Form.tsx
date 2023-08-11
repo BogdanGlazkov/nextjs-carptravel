@@ -69,8 +69,8 @@ export default function Form({ extended }: { extended: boolean }) {
                 },
               })}
             />
-            {errors["fullName"] ? (
-              <InputError text={errors["fullName"]?.message} />
+            {errors.fullName ? (
+              <InputError text={errors.fullName?.message} />
             ) : null}
           </label>
 
@@ -88,9 +88,7 @@ export default function Form({ extended }: { extended: boolean }) {
                 },
               })}
             />
-            {errors["email"] ? (
-              <InputError text={errors["email"]?.message} />
-            ) : null}
+            {errors.email ? <InputError text={errors.email?.message} /> : null}
           </label>
 
           {extended ? (
@@ -110,8 +108,8 @@ export default function Form({ extended }: { extended: boolean }) {
                     },
                   })}
                 />
-                {errors["position"] ? (
-                  <InputError text={errors["position"]?.message} />
+                {errors.position ? (
+                  <InputError text={errors.position?.message} />
                 ) : null}
               </label>
 
@@ -135,8 +133,8 @@ export default function Form({ extended }: { extended: boolean }) {
                     },
                   })}
                 />
-                {errors["phone"] ? (
-                  <InputError text={errors["phone"]?.message} />
+                {errors.phone ? (
+                  <InputError text={errors.phone?.message} />
                 ) : null}
               </label>
             </>
@@ -167,18 +165,20 @@ export default function Form({ extended }: { extended: boolean }) {
                 },
               })}
             />
-            {errors["message"] ? (
-              <InputError text={errors["message"]?.message} />
+            {errors.message ? (
+              <InputError text={errors.message?.message} />
             ) : null}
           </label>
 
           <div className="relative md:flex md:justify-between">
             {extended ? (
-              <label className="relative md:absolute md:top-0 md:-left-[242px] lg:-left-[314px] flex items-start gap-[8px] text-[12px] font-extralight leading-[22px] mb-[16px] lg:mb-[24px] cursor-pointer">
+              <label className="relative md:absolute md:top-0 md:-left-[242px] lg:-left-[314px] flex items-start gap-[8px] text-[12px] font-extralight leading-[22px] mb-[16px] lg:mb-[24px] cursor-pointer group">
                 <div className="flex items-center justify-center w-[22px] h-[22px] lg:w-[24px] lg:h-[24px] border border-white">
                   <div
                     className={`${
-                      checked ? "bg-white" : "bg-white/10"
+                      checked
+                        ? "bg-white"
+                        : "bg-white/10 duration-300 group-hover:bg-white/50 group-focus:bg-white/50"
                     } w-[14px] h-[14px] lg:w-[16px] lg:h-[16px]`}
                   >
                     <input
@@ -189,8 +189,8 @@ export default function Form({ extended }: { extended: boolean }) {
                         required: data.errors.notEmpty,
                       })}
                     />
-                    {errors["checked"] ? (
-                      <InputError text={errors["checked"]?.message} />
+                    {errors.checked ? (
+                      <InputError text={errors.checked?.message} />
                     ) : null}
                   </div>
                 </div>
@@ -201,7 +201,7 @@ export default function Form({ extended }: { extended: boolean }) {
             ) : null}
 
             <button
-              className="block ml-auto text-[30px] lg:text-[32px] font-medium leading-normal uppercase duration-300 hover:opacity-50 focus:opacity-50 cursor-pointer"
+              className="block ml-auto text-[30px] lg:text-[32px] font-medium leading-normal uppercase duration-300 hover:opacity-60 focus:opacity-60 cursor-pointer"
               type="submit"
             >
               {data.send}

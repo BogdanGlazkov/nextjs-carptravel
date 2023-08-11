@@ -33,8 +33,8 @@ export default function Slide(slide: ISlideProps) {
             className="w-full md:w-[463px] md:h-[370px] lg:w-[608px] lg:h-[434px] xs:mb-[12px] object-cover object-center"
             src={image.src}
             alt={image.alt}
-            width={0}
-            height={0}
+            width={280}
+            height={220}
             sizes="100vw"
           />
           <div className="w-full flex flex-col gap-[224px] md:gap-[34px] lg:gap-0 mdOnly:mt-[197px]">

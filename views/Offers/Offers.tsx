@@ -44,14 +44,14 @@ export default function Offers() {
                   currentSlide === idx
                     ? "text-white font-medium dotted flex items-center gap-[8px]"
                     : " text-white/50"
-                } uppercase relative text-left text-[20px] md:text-[22px] lg:text-[28px] leading-[0.8] font-extralight lg:w-[260px] cursor-pointer`}
+                } uppercase relative text-left text-[20px] md:text-[22px] lg:text-[28px] leading-[0.8] font-extralight lg:w-[260px] hover:text-white focus:text-white cursor-pointer`}
                 onClick={() => instanceRef.current?.moveToIdx(idx)}
               >
                 {button}
                 <span
                   className={`${
                     currentSlide === idx ? "lg:block" : "lg:hidden"
-                  } hidden absolute top-[7px] left-[115%] normal-case lg:w-[290px] lg:text-[12px] lg:font-extralight lg:tracking-[2.4px]`}
+                  } hidden absolute top-[7px] left-[115%] normal-case lg:w-[290px] lg:text-[12px] lg:font-extralight lg:tracking-[2.4px] cursor-default`}
                 >
                   {data.slides[idx].subtitle}
                 </span>

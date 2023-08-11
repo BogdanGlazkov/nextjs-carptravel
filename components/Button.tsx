@@ -14,7 +14,7 @@ export default function Button({ children }: { children: ReactNode }) {
       duration={600}
       isDynamic={true}
     >
-      <span>{children}</span>
+      {children}
     </Link>
   );
 }
