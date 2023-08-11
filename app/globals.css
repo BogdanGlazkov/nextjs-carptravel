@@ -142,16 +142,3 @@ body {
     height: 8px;
   }
 }
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.keen-slider__slide > div {
-  animation: fadeIn 600ms ease-in-out;
-}

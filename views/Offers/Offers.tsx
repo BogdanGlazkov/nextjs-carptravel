@@ -36,7 +36,7 @@ export default function Offers() {
       </ul>
 
       {loaded && instanceRef.current ? (
-        <ul className="absolute top-[calc(50%+60px)] left-[calc(50%-150px)] sm:top-[calc(50%+80px)] sm:left-[calc(50%-180px)] md:top-[160px] md:left-[calc(50%+130px)] lg:top-[244px] lg:left-[calc(50%+25px)] flex flex-col items-start gap-[16px] lg:gap-[24px] w-[200px] md:w-[210px] lg:w-[260px] z-10">
+        <ul className="absolute top-[calc(50%+50px)] left-[calc(50%-150px)] sm:top-[calc(50%+80px)] sm:left-[calc(50%-180px)] md:top-[160px] md:left-[calc(50%+130px)] lg:top-[244px] lg:left-[calc(50%+25px)] flex flex-col items-start gap-[16px] lg:gap-[24px] w-[200px] md:w-[210px] lg:w-[260px] z-10">
           {data.buttons.map((button, idx) => (
             <li key={idx}>
               <button

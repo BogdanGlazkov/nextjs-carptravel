@@ -26,4 +26,5 @@ export interface IFormData {
   position?: string;
   phone?: number;
   message: string;
+  checked: boolean;
 }

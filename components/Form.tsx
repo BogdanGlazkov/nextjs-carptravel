@@ -185,7 +185,13 @@ export default function Form({ extended }: { extended: boolean }) {
                       className="hidden"
                       type="checkbox"
                       onClick={() => setChecked(!checked)}
+                      {...register("checked", {
+                        required: data.errors.notEmpty,
+                      })}
                     />
+                    {errors["checked"] ? (
+                      <InputError text={errors["checked"]?.message} />
+                    ) : null}
                   </div>
                 </div>
                 <span className="inline-block md:w-[192px] lg:w-[258px]">
