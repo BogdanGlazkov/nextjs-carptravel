@@ -34,7 +34,7 @@
 or just send them your message using form</p>
 <hr />
 <h5>Code Examples</h5>
-<p>The project was created using create-next-app. Here is a code example from Header component</p>
+<p>The project was created using <code>npx create-next-app<code>. Here is a code example from Header component</p>
 <p><code>
 import Logo from "@/components/Logo";
 import NavBar from "@/components/NavBar";

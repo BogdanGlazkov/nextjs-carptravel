@@ -59,7 +59,7 @@ export default function Form({ extended }: { extended: boolean }) {
               {...register("fullName", {
                 required: data.errors.notEmpty,
                 pattern: {
-                  value: /^[a-zA-Z0-9_ ]+$/,
+                  value: /^[a-zа-яієїґ0-9_ \']+$/i,
                   message: data.errors.name,
                 },
                 minLength: { value: 2, message: "2 characters minimum" },
